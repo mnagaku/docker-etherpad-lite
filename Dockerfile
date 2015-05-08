@@ -10,7 +10,7 @@ ENV LC_ALL en_US.UTF-8
 RUN sed -i".bak" -e 's/\/\/archive.ubuntu.com/\/\/ftp.jaist.ac.jp/g' /etc/apt/sources.list &&\
     apt-get update && apt-get upgrade -y &&\
     apt-get -y install wget unzip build-essential curl python libpq-dev &&\
-    wget -qO- https://deb.nodesource.com/setup_nodesource_repo | bash - &&\
+    wget -qO- https://deb.nodesource.com/setup_0.12 | bash - &&\
     apt-get update && apt-get upgrade -y && apt-get -y install nodejs &&\
     wget https://github.com/ether/etherpad-lite/archive/master.zip &&\
     unzip master && rm -f master.zip &&\
